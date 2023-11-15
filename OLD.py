@@ -366,7 +366,6 @@ class GoBoard(object):
         Returns BLACK or WHITE if any five in a row is detected for the color
         EMPTY otherwise.
         """
-        print(self.rows, self.cols, self.diags)
         for r in self.rows:
             result = self.has_five_in_list(r)
             if result != EMPTY:
