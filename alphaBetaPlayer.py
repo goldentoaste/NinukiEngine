@@ -5,6 +5,7 @@ from board import Board, BLACK, EMPTY, WHITE
 import numpy as np
 import numpy.random as npRandom
 
+
 class AlphaBetaPlayer(Player):
     
     def __init__(self, board: Board):

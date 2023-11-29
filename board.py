@@ -27,7 +27,7 @@ EMPTY = 0
 WALL = -1
 
 dirs = ((0, 1), (1, 0), (1, 1), (-1, 1))
-dirSigned = (*dirs, *(-d for d in dirs))
+dirSigned = (*dirs, *((-d[0], -d[1]) for d in dirs))
 
 
 def opponent(color: Literal[1, 2]):
@@ -58,7 +58,7 @@ class Board:
     def __init__(self, size=7, iniData=None):
         """
         warning, creating a board involves pre computing the views and some setup to speed up later opertaions,
-        should be repeatly creating new boards should be avoided
+        repeatly creating new boards should be avoided
         """
 
         ################### initial data ###################
