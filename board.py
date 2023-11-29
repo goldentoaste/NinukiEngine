@@ -31,6 +31,9 @@ dirSigned = (*dirs, *(-d for d in dirs))
 
 
 def opponent(color: Literal[1, 2]):
+    '''
+    warning, just use (color % 2) + 1 instead if you calling this lots of times.
+    '''
     return (color % 2) + 1
 
 def t2p(move):
@@ -171,6 +174,7 @@ class Board:
         else:
             self.whiteScore += len(captures)
             return self.whiteScore >= 10
+
         
 
     def playNoUndo(self, row, col, color):

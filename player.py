@@ -5,7 +5,7 @@ from board import Board
 
 class Player:
     def __init__(self, board: Board):
-        self.board = board
+        pass
     
     def genMove(self, color):
         # given color, return a move this player should play
