@@ -29,7 +29,7 @@ class AlphaBetaPlayer(Player):
             elif score == 0:
                 draws.append(m)
         
-        return 
+        return moves[0]
     
     def alphaBeta(self,  alpha, beta, isMaxPlayer):
         '''
